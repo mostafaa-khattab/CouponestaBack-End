@@ -5,8 +5,8 @@ import { Strategy as GoogleStrategy } from "passport-google-oauth2";
 passport.use(
     new GoogleStrategy(
         {
-            clientID: process.env.CLIENT_ID,
-            clientSecret: process.env.CLIENT_SECRET,
+            clientID: process.env.CLIENT_ID || "788276623641-3uglucqsge7hknpqmupo67ehpfvq70cg.apps.googleusercontent.com",
+            clientSecret: process.env.CLIENT_SECRET || "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",
             callbackURL: 'https://saraha-seej.onrender.com/auth/google/callback',
             passReqToCallback: true,
             scope: ['profile', 'email']
